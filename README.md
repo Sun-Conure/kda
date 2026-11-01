@@ -15,6 +15,7 @@ This repository documents an early research prototype and remains under active d
 | `CONTRIBUTING.md` | Contribution process and DCO sign-off requirements. |
 | `THIRD_PARTY_NOTICES.md` | Third-party component and license disclosures. |
 | `third_party_licenses/` | Verbatim upstream license files for distributed third-party components. |
+| `skills/kernel-skill-index/SKILL.md` | Optional index into the private `Sun-Conure/kernel_skill` library. |
 
 ## Community Kernel Wishlist
 
@@ -26,13 +27,14 @@ Have a kernel that needs optimization? [Submit a request](https://github.com/NVl
 Install the agent workflow dependencies before starting the agent session:
 
 ```bash
-git clone --recurse-submodules https://github.com/mit-han-lab/kernel-design-agents.git
-cd kernel-design-agents
+git clone --recurse-submodules https://github.com/Sun-Conure/kda.git
+cd kda
 
 # link skills
 mkdir -p ~/.claude/skills
 ln -s "$(pwd)/skills/ncu-report-skill" ~/.claude/skills/ncu-report-skill
 ln -s "$(pwd)/skills/KernelWiki" ~/.claude/skills/KernelWiki
+ln -s "$(pwd)/skills/kernel-skill-index" ~/.claude/skills/kernel-skill-index
 
 # or clone the independently licensed ncu skill directly
 mkdir -p ~/.claude/skills && cd ~/.claude/skills
@@ -42,6 +44,12 @@ git clone https://github.com/mit-han-lab/ncu-report-skill.git
 Use KernelWiki from this repository's pinned submodule. A direct upstream
 checkout may contain artifact snapshots governed by additional terms that are
 omitted from this distribution.
+
+For the private personal kernel skill library, read
+[`skills/kernel-skill-index/SKILL.md`](skills/kernel-skill-index/SKILL.md).
+It routes by hardware model, compute type, and optimization technique. Reuse an
+authorized checkout or fetch the catalog on demand with the instructions there.
+The catalog is optional and requires permission to `Sun-Conure/kernel_skill`.
 
 ## Submodules
 

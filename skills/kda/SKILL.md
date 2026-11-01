@@ -19,6 +19,7 @@ description: 使用 NVIDIA Kernel Design Agents 工作流开发和优化 CUDA GP
 
 ## 配套技能与环境
 
+- For the private `Sun-Conure/kernel_skill` catalog, read [kernel-skill-index](../kernel-skill-index/SKILL.md). Reuse an authorized checkout or fetch it on demand, then follow its hardware, compute-type, and technique indices to select task-specific guidance.
 - 优化 Blackwell/Hopper kernel 时，按需读取已安装的 `KernelWiki` 技能。其知识截止日期为 2026-04-27；架构特有技巧不可直接套用到其他 GPU。
 - 本机已为知识库配置独立 Python 环境。运行查询脚本时使用 `/Users/bytedance/.codex/skills/KernelWiki/.venv/bin/python`，例如：`/Users/bytedance/.codex/skills/KernelWiki/.venv/bin/python /Users/bytedance/.codex/skills/KernelWiki/scripts/query.py --tag nvfp4 --type kernel --compact`。直接调用知识库技能时也使用此解释器；其他机器使用其自己的 Python 环境。
 - 分析 Nsight Compute 报告时，按需读取已安装的 `ncu-report-skill` 技能。实际 profiling 需要 NVIDIA GPU、CUDA Toolkit、`ncu` 及随其提供的 `ncu_report` Python 模块。
